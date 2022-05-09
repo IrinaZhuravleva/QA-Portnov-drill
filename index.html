@@ -1,0 +1,2862 @@
+<!DOCTYPE html>
+<!-- tester-drill.surge.sh -->
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Drill - Portnov Computer School</title>
+    <meta name="description" content="Drill app v1.33">
+    <meta name="author" content="Andrii Khmelkov">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+    <link type="text/css" rel="stylesheet" href="drill.css">
+    <script src="jquery-2.0.3.min.js"></script>
+
+</head>
+
+<body style="background-color: rgb(215, 215, 215);" cz-shortcut-listen="true">
+    <ul id="menu">
+        <li class="current"><a href="#" data-id="qa_basics">Основы QA</a></li>
+        <li><a href="#" data-id="testing_types">Типы Тестирования</a></li>
+        <li><a href="#" data-id="about_bugs">Баги</a></li>
+        <li><a href="#" data-id="documentation">Документация</a></li>
+        <li><a href="#" data-id="technical">Технические навыки</a></li>
+        <li><a href="#" data-id="mobile">Мобильные устройства</a></li>
+        <li><a href="https://www.bsuir.by/m/12_100229_1_103512.pdf" target="_blank">Глоссарий ISTQB</a></li>
+        <li><a href="#" data-id="images">Веселые картинки</a></li>
+        <li><a href="http://www.portnov.com/drill/" target="_blank">English version</a></li>
+    </ul>
+    <br>
+    <!-- QA Basics Table -->
+    <table style="margin: auto; display: table;" class="pbox" id="qa_basics">
+        <tbody>
+            <tr>
+                <!-- table #one row #one -->
+                <td>
+                    <!-- table #one row #one cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Предоставление актуальной информации на соответствие продукта техническому заданию.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #one cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Каковы цели тестирования?</span>
+                            </div>
+                            <div class="back">
+                                <!-- <span class="answer">С точки зрения QA - насколько актуальное программное
+                                    обеспечения соответствует требованиям.</span> -->
+                                <span class="answer">Тестирование позволяет оценить качество разрабатываемого продукта.</span>
+                                </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #one cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <!-- <span class="question">Что такое QA для ПО?</span> -->
+                                <span class="question">Что такое QA для ПО?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">QA для ПО - это процесс отслеживания и улучшения всех действий, 
+                                    связанных с разработкой ПО, начиная с требований, затем дизайн и код-ревью, заканчивая тестированием и внедрением.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #one cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <!-- <span class="question">Что такое тестирование ПО?</span> -->
+                                <span class="question">Как расшифровывается QA и SQA?</span>
+                            </div>
+                            <div class="back">
+                                <!-- <span class="answer">Тестирование ПО - это процесс анализа ПО с целью 
+                                    выявления разницы между существущими условиями работы и условиями требований и оценки
+                                    особенностей ПО.</span> -->
+                                <span class="answer">QA — обеспечение качества; SQA (software quality assurance) - тестирование программного
+                                обеспечения</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #one cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">В чем разница между QA и тестировщиком?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Тестировщик работает с продуктом как с результатом (т. е. он предполагает, что именно эта версия ПО попадёт в руки
+                                конечного пользователя). QA-инженер работает с продуктом, который находится в процессе создания</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #one cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое нормы качества?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Это показатели верификации и валидации.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #one cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question"> Что такое жизненный цикл разработки ПО(SDLC)?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer"> Концептуальная модель, использованная в проджект-менеджменте,
+                                    которая описывает стадии, вовлеченные в проект разработки информационной системы,
+                                    начиная с изучения выполнимости до готового приложения</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #one row #two -->
+                <td>
+                    <!-- table #one row #two cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question"> Основные стадии жизненного цикла разработки ПО?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Анализ требований;<br>Дизайн (Архитектура);<br>Разработка
+                                    (Написание кода);<br>Тестирование и дебаггинг;<br>Экcплуатация и Поддержка.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Agile-разработка ПО?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer"><a href="https://habr.com/ru/company/edison/blog/313410/" target="_blank">Гибкая разработка ПО</a> путём сведения разработки к итерациям, каждая -
+                                программный проект в миниатюре и включает все задачи, необходимые для выдачи
+                                мини-прироста по функциональности.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Водопадная модель?</span>
+                            </div>
+                            
+                            <div class="back">
+                                <span class="answer"><a href="https://web-creator.ru/articles/waterfall" target="_blank"></a>Это последовательный
+                                    процесс разработки ПО, в котором прогресс видится 
+                                    устойчиво текущим стадия за стадией.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Сборка?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Это скомпилированная версия 
+                                    продукта ПО с самыми актуальными изменениями в коде.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Версия?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Это уникальный ID, приписываемый продукту ПО 
+                                    для информирования Пользователей о состоянии приложения, его характеристиками.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Релиз?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Сборка ПО, предоставляемая в конечное пользование.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Как тестировать при отсутствии требований?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Использовать документацию похожих приложений 
+                                    или приложений с похожими характеристиками.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #one row #three -->
+                <td>
+                    <!-- table #one row #two cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Валидация?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Проверяет, соответствует ли ПО требованиям и ожиданиям клиента (Заказчика).</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Верификация?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Проверяет, соответствует ли ПО ожиданиям пользователя.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Отличие между Валидацией и Верификацией?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">- Валидация отвечает на вопрос “Делаем ли мы правильный продукт?" Верификация
+                                отвечает на вопрос “Делаем ли мы продукт правильно?”
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <!-- документация -->
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Почему требуется тестирование ПО?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Любой сбой, дефект или ошибка, обнаруженные клиентом в готовом продукте, нарушают доверие к компании.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- документация -->
+                    <!-- table #one row #two cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое аудит качества?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Процесс систематической и независимой проверки программного продукта или процесса для оценки соответствия
+                                спецификациям, стандартам, соглашениям и другим соответствующим критериям.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- типы тестрирования -->
+                    <!-- table #one row #two cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое превентивный подход в тестировании?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Этот подход заключается в предотвращении дефектов. При таком подходе тесты разрабатываются на ранних этапах SDLC, то
+                                    есть до того, как ПО было создано. Он подпадает под анализ качества (QA).
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <!-- документация -->
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое реактивный подход в тестировании?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Также известен как Validation Process. Заключается в выявлении дефектов. Тесты
+                                предназначены для выполнения после того, как ПО было произведено. Подпадает под контроль качества (QC).
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!-- четвертый ряд в Основы -->
+            <tr>
+                <!-- table #two row #six -->
+                <td>
+                    <!-- table #two row #five cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что подразумевается под тестовой средой?
+</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Среда разработки,
+                                Среда тестирования,
+                                Интеграционная среда,
+                                Превью среда,
+                                Продакшн среда
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Среда разработки (Development Env)</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">В ней разработчики пишут код, проводят отладку, исправляют ошибки, выполняют Unit-тестирование. За эту среду отвечают
+                                также разработчики</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Среда тестирования (Test Env)</span>
+                            </div>
+                            <div class="back">
+            
+                                <span class="answer">В ней работают тестировщики. Тут тестируются новые билды. Здесь тестировщики проверяют функционал, проводят
+                                регрессионные проверки, воспроизводят ошибки.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Интеграционная среда (Integration Env)</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Иногда реализована в рамках среды тестирования, а иногда в рамках превью среды. В этой среде собрана необходимая для
+                                end-to-end тестирования схема взаимодействующих друг с другом модулей, систем, продуктов.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Превью среда (Preview, Preprod Env)</span>
+                            </div>
+                            <div class="back">
+            
+                                <span class="answer">Используется для финальной проверки ПО в условиях максимально приближенным к «боевым».</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что такое Продакшн среда (Prodaction Env)</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Среда, в которой работают пользователи.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Что подразумевается под тестовыми данными?
+</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Набор входных значений, необходимых для выполнения Test case. Тестеры определяют данные в соответствии с требованиями.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #two row #six -->
+                <td>
+                    <!-- table #two row #five cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Основные инструменты тестировщика?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">DevTools,
+                                Сниффер (Charles Proxy),
+                                Тестирование API (Postman или SoapUI),
+                                Тестирование производительности (JMeter),
+                                Различные инструменты из категории тестирования безопасности (OWASP);
+                                мессенджеры, баг-трекинговые системы, генераторы тестовых данных и т.п.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question"></span>
+                            </div>
+                            <div class="back">
+                                <span class="answer"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question"></span>
+                            </div>
+                            <div class="back">
+            
+                                <span class="answer"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question"></span>
+                            </div>
+                            <div class="back">
+                                <span class="answer"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question"></span>
+                            </div>
+                            <div class="back">
+            
+                                <span class="answer"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question"></span>
+                            </div>
+                            <div class="back">
+                                <span class="answer"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question"></span>
+                            </div>
+                            <div class="back">
+                                <span class="answer"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Testing Types Table -->
+    <table style="margin: auto; display: none;" class="pbox" id="testing_types">
+        <tbody>
+            <tr>
+                <!-- table #two row #one -->
+                <td>
+                    <!-- table #two row #one cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Мануальное/Ручное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Исполнение человеком процедур тестирования
+                                    без использования инструментов Автоматизированного тестирования и языков программирования.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #one cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Автоматизиро- ванное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Процесс написания и выполнения
+                                    компьютерной программы для тестирования.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #one cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое тестирование «черного ящика»?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Тестирование происходит с позиции
+                                    пользователя (без доступа к использованному исходному коду).</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #one cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое gray-box тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Это использование информации о стуктуре, 
+                                    дизайне и/или среды для расширения или фокусировки «black-box тестирование»
+                                    и для расширения продуктивности тестирования посредством применения 
+                                    уместных методов и инструментов.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #one cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое white-box тестирование?</span>
+                            </div>
+                            <div class="back">
+                                
+                                <span class="answer"><a
+                                        href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B1%D0%B5%D0%BB%D0%BE%D0%B3%D0%BE_%D1%8F%D1%89%D0%B8%D0%BA%D0%B0"
+                                        target="_blank">Осуществляется на уровне исходного кода.</a>
+                                    Основывается на знании внутренней логики кода приложенения.
+                                   </span>
+                                    <!-- White box testing is done at the source code level. -->
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #one cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Функциональное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Оно проводится с целью проверки того, что функции системы работают в соответствии с их назначением.
+                                    Как правило, функции описаны в рабочих документах (требования, спецификации), но могут
+                                    быть и не задокументированы.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #one cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Нефункциональное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                
+                                <span class="answer">
+                                    <a href="http://www.protesting.ru/testing/testtypes.html" target="_blank">Оно
+                                    проводится с целью</a> тестирования атрибутов компонента или системы,
+                                    которые не связаны с функциональностью: Надежность, Эффективность,
+                                    Удобство пользования, Поддерживаемость и т.д.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #two row #two -->
+                <td>
+                    <!-- table #two row #two cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Позитивное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Применяется для проверки того, что ПО корректно обрабатывает
+                                    ситуации, в которых пользователь действует, как от него ожидается (верификация). </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #two cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Негативное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Применяется для проверки того, что ПО корректно обрабатывает
+                                    ситуации, в которых пользователь действует некорректно (неправильные действия, вводы, настройки).</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #two cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Граничное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Для поля "имя" от 3 до 8 знаков: проверка на нижнюю границу. 3 плюс/минус 1 = 2, 3, 4. Проверка на верхнюю = 7,8,9,
+                                    добавить к проверкам 5 и 15.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #two cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Исследова- тельское тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Тестировщик "исследует" приложение при отсутствии требований, без заранее
+                                    спроектированных тестов (выполняемых в точном соответствии с планом), основываясь на
+                                    своем опыте и креативности. Тестирование черного ящика. Мануальное тестирование.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+
+                <td>
+                    <!-- table #two row #two cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Свободное тестирование (ad-hoc testing)?</span>
+                            </div>
+                            <div class="back">
+                                <span
+                                    class="answer"><a
+                                        href="https://training.qatestlab.com/blog/technical-articles/what-is-ad-hoc-testing/"
+                                        target="_blank">Выполняется без подготовки</a> к тестированию продукта, без определения
+                                    ожидаемых результатов, проектирования тестовых сценариев. Это неформальное,
+                                    импровизационное тестирование. Оно не требует никакой документации или
+                                    планирования.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- https://training.qatestlab.com/blog/happy-testing/students-test-types/ -->
+                    <!-- https://training.qatestlab.com/blog/happy-testing/blank-sheet-testing/ -->
+                </td>
+                <td>
+                    <!-- table #two row #two cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Модульное тестирование (Юнит-тестирование)?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Тестирование "белого ящика" для ПО компонентов/модулей.
+                                    Производится разработчиками или тестировщиками по методу "белого ящика".
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #two cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Интеграционное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Тестирование
+                                    взаимодействия модулей между собой.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #two row #three cell #one -->
+                <td>
+                    <!-- cell #four in row #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Системное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    выполняемое на полной, интегрированной системе, с целью проверки соответствия
+                                    системы исходным требованиям. Альфа-тестирование и бета-тестирование являются его
+                                    подкатегориями. Это black box testing.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #three cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое End-to-end тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Тестирование приложения полностью
+                                    как можно ближе реальной среде, на всех уровнях –
+                                    начиная с фронтенда и заканчивая бэкэндом,
+                                    включая интерфейс, базы данных и конечные точки.
+                                   </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #three cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Приемочное пользовательское тестирование (UAT)?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer"><a href="https://www.calltouch.ru/glossary/uat-testirovanie/"
+                                        target="_blank">Оно проводится группой (SME - subject matter experts)</a>
+                                    от лица конечных пользователей системы для
+                                    принятия решения по внедрению.
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #three cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Тестирование сборки (Release/Build Acceptance
+                                    Testing)?</span>
+                            </div>
+                            <div class="back">
+                                <!-- направлено для предварительной проверки разрабатываемого программного продукта перед
+                                запуском полномасштабного тестирования по всем параметрам, проводимого QA-командой. -->
+                                <span class="answer">
+                                    Осуществляется на последней версии сборки/релиза для проверки того, что ПО достаточно хорошо
+                                    для приемки в тестирование, Это означает, что QA-команда может двигаться от предыдущего релиза к
+                                    новому.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #three cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Тестирование установки?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Оно проверяет
+                                    уровень корректности установки ПО продукта в искусственно
+                                    созданной среде с целью выявления степени его готовности к эксплуатации.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #three cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Тестирование совместимости?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">вид нефункционального тестирования - проверка корректной
+                                    работы продукта в определенном окружении(1. Аппаратная платформа 2. Операционная
+                                    система (Windows, MacOS, ...)
+                                    3. Браузеры (IE, Firefox, Chrome...) 4. Различное
+                                    разрешение экрана.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #three cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое тестирование на Кроссбраузерную совместимость?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    <a href="https://quality-lab.ru/blog/cross-browser-compatibility-testing/"
+                                        target="_blank">Проводится для проверки</a>, что веб-приложение выглядит, ведет себя и взаимодействует
+                                    с пользователем одинаково в различных браузерах.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #two row #four -->
+                <td>
+                    <!-- table #two row #four cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Дымовое тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">рассматривается в качестве короткого цикла тестов, 
+                                    выполняемы для подтверждения факта запуска и выполнения функций
+                                    устанавливаемого приложения после сборки нового или редактируемого кода.
+                                    Ориентировано на тестирование большого количества функционала за самые короткие
+                                    сроки.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #four cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Санитарное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Узконаправлено для доказательства того, что конкретная
+                                    функция работает согласно заявленным в спецификации требованиям. Используется
+                                    для определения работоспособности определенной части приложения после изменений. 
+                                    Обычно выполняется вручную. 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #four cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Регрессионное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Собирательное название для всех видов тестирования программного обеспечения,
+                                    направленных на обнаружение ошибок в уже протестированных участках исходного кода.
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #four cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Альфа-тестирование?</span>
+                            </div>
+                            <div class="back">
+                                
+                                <span class="answer">
+                                    <a href="https://start-it.ua/alfa_tests#:~:text=%D0%90%D0%BB%D1%8C%D1%84%D0%B0%2D%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%2D%20%D1%8D%D1%82%D0%BE%20%D0%BE%D0%B4%D0%B8%D0%BD%20%D0%B8%D0%B7%20%D1%82%D0%B8%D0%BF%D0%BE%D0%B2%20%D0%BF%D1%80%D0%B8%D0%B5%D0%BC%D0%BE%D1%87%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.&text=%D0%A2%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D1%8F%D0%B5%D1%82%D1%81%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%B8%D0%BC%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F,%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B0%20%D0%BA%D0%BE%D0%BD%D0%B5%D1%87%D0%BD%D1%8B%D0%BC%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F%D0%BC%D0%B8%20%D0%BD%D0%B0%20%D1%80%D1%8B%D0%BD%D0%BA%D0%B5."
+                                        target="_blank">Один из типов приемочного тестирования</a>, когда продукт готов на 70%
+                                    - 90%. Выполняется для имитации поведения в режиме реального времени в соответствии
+                                    с использованием продукта конечными пользователями на рынкекогда продукт готов на 70% - 90%.
+                                   </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #four cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Бета-тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    <a href="https://start-it.ua/beta_test" target="_blank">
+                                    Предполагаемый реальный пользователь проверяет продукт на</a>
+                                    функциональность, удобство использования, надежность и совместимость.
+                                    Поскольку бета-тестирование происходит на стороне конечного пользователя, это не
+                                    может быть контролируемым действием.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #four cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Тестирование производитель-ности?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Проводится с целью определения, как быстро работает ПО
+                                    или его часть под определённой нагрузкой. Также может служить для проверки и
+                                    подтверждения других атрибутов качества системы, таких как масштабируемость,
+                                    надёжность и потребление ресурсов.
+                                   </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #four cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Нагрузочное тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Исследование способности приложения сохранять заданные показатели качества при нагрузке
+                                    в допустимых пределах и некотором превышении этих пределов (определение «запаса
+                                    прочности»).</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #two row #five -->
+                <td>
+                    <!-- table #two row #five cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Стресс-тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Используется для определения устойчивости системы или модуля в условиях превышения
+                                    пределов нормальной нагрузки.
+                                   </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Тестирование на отказ и восстановление?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Проверка на способность противостоять и успешно восстанавливаться
+                                    после сбоев в связи с ошибками ПО, отказами
+                                    оборудования или проблемами связи. Проверка систем восстановления (или дублирующих систем), 
+                                    которые при необходимости обеспечат сохранность и
+                                    целостность данных ПО.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Юзабилити-тестирование?</span>
+                            </div>
+                            <div class="back">
+                                
+                                <span class="answer">Позволяет проверить комфортное использование сайта/ПО для
+                                    пользователя, насколько легко найти необходимую информацию или выполнить желаемые
+                                    действия.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Тестирование доступности?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Один из видов тестирования юзабилити.
+                                    Проверка, что продукт удобен в использовании, в том числе для
+                                    людей с инвалидностью или особенностей восприятия(проблемы со
+                                    зрением,
+                                    слухом или ограничения в подвижности рук).</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Тестирование безопасности?</span>
+                            </div>
+                            <div class="back">
+
+                                <span class="answer">Проверка программного продукта на
+                                    наличие уязвимостей, которыми могут воспользоваться злоумышленники, чтобы получить
+                                    доступ к закрытой информации или навредить продукту и его пользователям.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Тестирование локализации?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Тестирование локализации проверяет, должным ли
+                                    образом программное обеспечение переведено и адаптировано к местным языкам и
+                                    культурам.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Какой вид тестирования наиболее часто исполняем?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Регрессионное тестирование</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!-- шестой ряд Типов тестирования -->
+            <tr>
+                <!-- table #two row #six -->
+                <td>
+                    <!-- table #two row #five cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_qabasics">
+                                <span class="question">Какие бывают техники тест-дизайна?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">                
+                                   <a href="https://www.simbirsoft.com/blog/tekhniki-test-dizayna-i-ikh-prednaznachenie/"
+                                        target="_blank">Эквивалентное Разделение (EP);</a>
+                                    Анализ Граничных Значений (BVA); Причина / Следствие
+                                    (CE); Предугадывание ошибки (EG); Исчерпывающее тестирование (ET).
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Тест-дизайн черного ящика</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">– классы эквивалентности;
+                                – анализ граничных значений;
+                                – таблицы решений;
+                                – диаграммы изменения состояния;
+                                – тестирование всех пар.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Тест-дизайн, основанный на технике "белого ящика".</span>
+                            </div>
+                            <div class="back">
+            
+                                <span class="answer">Процедура написания или выбора тест-кейсов на основе анализа внутреннего устройства системы или компонента.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Динамическое тестирование?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Предполагает запуск программного кода. Т. обр., анализируется поведение программы во время ее работы.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Статическое тестирование?</span>
+                            </div>
+                            <div class="back">
+            
+                                <span class="answer">Предполагает, что программный код во время тестирования не будет выполняться. При этом само тестирование может быть как
+                                ручным, так и автоматизированным.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question">Что такое Тестирование взаимодействия?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Нацелен на оценку качества взаимодействия компонент программной системы или всего приложения с другими компонентами
+                                или программным обеспечением.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_testingtypes">
+                                <span class="question"></span>
+                            </div>
+                            <div class="back">
+                                <span class="answer"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        
+        </tbody>
+    
+    
+    </table>
+    
+    
+    <!-- Bugs Table -->
+    <table style="margin: auto; display: none;" class="pbox" id="about_bugs">
+        <tbody>
+            <tr>
+                <!-- table #three row #one -->
+                <td>
+                    <!-- table #three row #one cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Что такое баг?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Несоответствие между актуальным поведением ПО приложенения и его ожидаемым поведением.
+                                    Мы узнаем об ожидаемом поведении из требованийБ спецификаций и др. технической документации.
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #one cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Что такое правило трех W?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Что (What) случилось? Где (where) случилось? При каких (which) обстоятельствах?
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #one cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Наиболее важные компоненты в Bug Report?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer"><a
+                                        href="https://training.qatestlab.com/blog/technical-articles/attributes-bug-report/"
+                                        target="_blank">Короткое описание (Заголовок);<br></a>Подробное описание;<br>
+                                    Шаги для воспроизведения;<br>
+                                    Результат и Ожидаемый результат;<br>
+                                    Вложения;<br>
+                                    Приоритет дефекта;<br>
+                                    Серьезность дефекта;<br>Статус;<br>
+                                    Окружение дефекта.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #one cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Что такое Жизненный цикл бага?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer"> <a
+                                        href="https://qalight.com.ua/baza-znaniy/zhiznennyiy-tsikl-defektov/"
+                                        target="_blank">Новый (New);</a><br>
+                                    Открыт (Opened);<br>
+                                    Отложен (Deferred);<br>
+                                    Отклонен (Rejected);<br>
+                                    Дубликат (Duplicate) уже был ранее внесен в «Bug-tracking»;<br>
+                                    Назначен (Assigned);<br>
+                                    Исправлен (Fixed);<br>
+                                    Проверен (Verified);<br>
+                                    Повторно открыт (Reopened).;<br>
+                                    Закрыт (Closed)</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #one cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Когда надо писать баг-репорт?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Сразу же при обнаружении бага.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #one cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Почему надо писать баг-репорты?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Для исправления багов.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #one cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Что делает баг-репорт хорошим?</span>
+                            </div>
+                            <div class="back">
+                                
+                                
+                                <span class="answer"><a href="http://www.protesting.ru/testing/bugwriting.html"
+                                        target="_blank">Следование правилу Трех W;</a><br>
+                                    Описание, как воспроизвести баг;<br>
+                                    Анализ проблему для минимизации шагов воспроизведения бага;<br>
+                                    Полный, легко понятный, непротиворечивый.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #three row #two -->
+                <td>
+                    <!-- table #three row #two cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Кто может изменить Назначение/Приоритет в баг-репорте?
+                                    </span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Тестировщик назнает серьезность;<br>
+                                    Development Manager назнает Приоритет.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #two cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Назовите уровни Важности (Severity) проблемы?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    <a href="https://training.qatestlab.com/blog/technical-articles/attributes-bug-report/"
+                                        target="_blank">S1 Блокирующая (Blocker);<br></a>
+                                    S2 Критическая (Critical);<br>
+                                    S3 Значительная (Major);<br>
+                                    S4 Незначительная (Minor);<br>
+                                    S5 Неудобство (Tweak);<br>
+                                    S6 Текст/опечатка (Text);<br>
+                                    S7 Тривиальная (Trivial);<br>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #two cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Назовите уровни Приоритета бага.</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">P1 Высокий (High);<br>P2 Средний (Medium);<br>P3 Низкий
+                                    (Low).</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #two cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Какой тип тестирования результатов находит наибольшее количество багов?
+                                </span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Негативное тестирование (vs Позитивное тестирование того же типа).</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #two cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">
+                                    Назовите баг-трекеры?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Jira;<br>Bugzilla;<br>Mantis.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #two cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Статусы багов?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Open;<br>
+                                    Pending;<br>
+                                    Fixed/Resolved;<br>
+                                    Closed;<br>
+                                    Can't Reproduce;<br>
+                                    Deferred;</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #two cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Если разработчик не может воспроизвести баг?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Воспроизведите на своем компьютере;
+                                    затем еще на 1-3 компьютерах;
+                                    если сможете: сравните свою рабочую среду со средой разработчика;
+                                    попросите разработчика продебажить в среде QA с помощью его/её инструментов.
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #three row #three -->
+                <td>
+                    <!-- table #three row #three cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Если разработчик пометил ваш баг, как "Как в дизайне"?
+                                </span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Проверьте требования;
+                                    Если не существует специфических требований,
+                                    сравните ту же особенность(feature), внедренную в приложения качества или поговорите
+                                    со своим менеджером и/или разработчиком;
+                                    Закройте баг.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #three cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Для чего созданы баг-трекинговые системы?</span>
+                            </div>
+                            <div class="back">
+                                <!-- https://training.qatestlab.com/blog/helpful-materials/overview-of-popular-bug-tracking-systems/#:~:text=%D0%91%D0%B0%D0%B3%2D%D1%82%D1%80%D0%B5%D0%BA%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%D1%8B%D0%B5%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B8%D0%BB%D0%B8%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B,%D0%BF%D0%BE%D0%BA%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0%20%D0%BD%D0%B5%20%D0%B1%D1%83%D0%B4%D0%B5%D1%82%20%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B0. -->
+                                <span class="answer">
+                                    Сообщать о багах;<br>
+                                    Отслеживать (изменять) баги;<br>
+                                    Закрывать баги;<br>
+                                    Проводить статистический анализ, отслеживать и суммировать результаты;<br>
+                                    Работать над улучшениями качества.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #three cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Зачем нужна База данных для трекинга багов?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Учет;<br>
+                                    Средство коммуникация (между сотрудниками и между отделами);<br>
+                                    Организация информации;<br>
+                                    Отслеживание персонального выполнения.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #three row #three cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Первоочередная задача Базы данных для трекинга багов?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Исправление багов.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                
+                <td>
+                    <!-- table #three row #three cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question">Назовите Принципы тестирования</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">1. тестирование показывает наличие дефектов;
+                                2. исчерпывающее тестирование невозможно;
+                                3. раннее тестирование;
+                                4. скопление дефектов;
+                                5. парадокс пестицида;
+                                6. тестирование зависит от контекста;
+                                7. заблуждение об отсутствии ошибок.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+
+                <td>
+                    <!-- table #three row #three cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_bugs">
+                                <span class="question"></span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Documentation Table -->
+    <table style="margin: auto; display: none;" class="pbox" id="documentation">
+        <tbody>
+            <tr>
+                <!-- table #four row #one -->
+                <td>
+                    <!-- table #four row #one cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое Тест-план?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer"><a
+                                        href="https://training.qatestlab.com/blog/technical-articles/test-plan/"
+                                        target="_blank">Документ,</a> описывающий весь объем работ по тестированию,
+                                        начиная с описания объекта тестирования, стратегии, расписания, критериев начала и окончания
+                                    тестирования, до необходимого в процессе работы оборудования, специальных знаний, а
+                                    также оценки рисков с вариантами их разрешения.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #one cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое Тест-кейс?</span>
+                            </div>
+                            <div class="back">
+                               <span class="answer"><a href="http://okiseleva.blogspot.com/2014/08/blog-post.html"
+                                        target="_blank">Описание проверки работы системы,</a> которое
+                                    может выполнить любой человек из команды, будь то тестировщик, разработчик, аналитик
+                                    или даже бизнес-заказчик.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #one cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое Use Case?</span>
+                            </div>
+                            <div class="back">
+                                
+                                <span class="answer"><a
+                                        href="https://systems.education/use-case#:~:text=Use%20Case%20(%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%2C%20%D0%92%D0%98,%D0%B8%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B9%20%D0%B2%20%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9%20%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8."
+                                        target="_blank">Описание
+                                    требования пользователя</a> к решению определенной задачи в системе,
+                                    описания взаимодействия пользователя с системой.
+                                    Позволяет обеспечить полноту функциональных требований,
+                                    следующих из потребностей пользователей.
+                                   </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #one cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Наиболее важные компоненты тест-кейсов?</span>
+                            </div>
+                            <div class="back">
+                                <!-- Номер — . Его удобно использовать для одинакового
+                                понимания, о какой проверке идет речь (например, дать ссылку в баге).
+                                Название — краткое описание сути проверки. Должно помещаться в твиттер и быть понятным!
+                                Кратко, но емко.
+                                Предварительные шаги — описание действий, которые необходимо выполнить, но прямого
+                                отношения к проверке они не имеют (например, зарегистрироваться в системе для проверки
+                                создания элемента). Если предварительных шагов нет, то секция не заполняется.
+                                Шаги — описание действий, необходимых для проверки (например, создание элемента).
+                                Ожидаемый результат (ОР) — сама проверка: что мы ожидаем получить после выполнения шагов
+                                ("Элемент создан"). -->
+                                <span class="answer">Уникальный идентификатор (ID);<br>
+                                    Название — краткое описание сути проверки;<br>
+                                    Предварительные шаги (если есть);<br>
+                                    Шаги;<br>
+                                    Ожидаемый результат (ОР).</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #one cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Зачем мы используем тест-кейсы?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    <a href="https://quality-lab.ru/blog/the-purpose-of-test-documentation/"
+                                        target="_blank">
+                                    Для лучшего тестового покрытия;</a><br>
+                                    Могут быть использованы повторно;<br>
+                                    могут быть пересмотрены;<br>
+                                    Отслеживаемы - знаем, что тестируем;<br>
+                                    Трекинг результатов тестов;<br>
+                                    Creates a deliverable.</span>
+                                    <!-- Project objective and key deliverables
+                                    Цель и основные результаты проекта -->
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #one cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое Тестовая матрица?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Механизм сбора данных. Представляет структуру для тестирования эффекта сочетаемости
+                                    двух или более переменных, стечения обстоятельств, типов технического обеспечения или событий
+                                   </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #one cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое Тестовый набор (Test Suite)?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                Совокупность тест-кейсов, выбранных с некоторой общей целью или по некоторому общему признаку (нпрм, проверка ЛК.). Иногда в такой
+                                совокупности результаты завершения одного тест-кейса становятся входным состоянием приложения для следую- щего
+                                тест-кейса. </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #four row #two -->
+                <td>
+                    <!-- table #two row #five cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое Итоговый отчет о тестировании (test summary
+                                    report)?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Подводит итог
+                                    задачам и
+                                    результатам тестирования и содержит оценку соответствующих объектов
+                                    тестирования
+                                    относительно критериев выхода.
+                                    -какие задачи были протестированы (функциональности);
+                                    -сроки проведения тестирования, кем проводилось тестирование;
+                                    -найденные ошибки (с описанием критических ошибок)
+                                    -исправлены ли эти ошибки на дату подачи отчета;
+                                    -обратить внимание на часто повторяющиеся ошибки (если такие есть);
+                                    -по необходимости добавить приложение со всеми тест-кейсами
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #two cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое Матрица соответствия требований (Traceability
+                                    Matrix)?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Таблица с соответствием функциональных требований (functional
+                                    requirements) ПО и подготовленных тестовых сценариев (test cases). В
+                                    заголовках колонок таблицы - требования, а в заголовках строк — тестовые
+                                    сценарии. На пересечении — отметка, означающая, что требование текущей колонки
+                                    покрыто тестовым сценарием текущей строки.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #two cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое Анализ рисков (Risk Analysis)?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Подразумевает действия, предпринимаемы для избежания неправильных ситуаций на 
+                                    этапе разработки проекта ПО, которые могли бы негативно повлиять на цель, качество,
+                                    график или стоимость проекта.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #two cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Когда понятно, что сделано достаточно тестов?
+                                    </span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Когда процесс тестирования приходит в точку, где дополнительные
+                                    тесты не будут значительно влиять на качество ПО.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #two cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">
+                                    К каким документам следует обращаться при создании Тест-кейсов?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Ко всей возможно доступной деловой и технической документации:
+                                    PRD - Product Requirements Document; 
+                                    Бизнес-требования (Business Requirements Document);
+                                    Functional Specifications; 
+                                    Manuals and Help; 
+                                    Use Cases; 
+                                    Test Design.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #two cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое Бизнес-требования (BRD)?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Этот документ пишется бизнес-аналитиками и детализирует бизнес-решения для проекта,
+                                    включая документацию с запросами и ожиданиями клиента.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #four row #two cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">
+                                    В чем разница между тест-кейсом и тест-планом?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Тест-кейс - самая маленькая единица, имеющая дело с
+                                    одним требованием. Тест-план - наоборот, содержит цели, подход и фокус:
+                                    какие компоненты ПО будут тестироваться, какие виды тестов будут проводиться и что должно быть для этого сделано, 
+                                    порядок выполнения тестов.<div class=""></div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!-- третий ряд Документация -->
+            <tr>
+                <!-- table #two row #six -->
+                <td>
+                    <!-- table #two row #five cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое Продуктная документация (Product/ Development
+                                    Documentation)?</span>
+                            </div>
+                        
+                            <div class="back">
+                                <span class="answer">
+                                    Плана проекта (Project Management Plan), в т. ч. и тест-план;
+                                    Требования к программному продукту (Product requirements Document (PRD)) и
+                                    функциональные
+                                    спецификации;
+                                    Архитектуру и Дизайн;
+                                    Тест-кейсы и наборы тест-кейсов (tesr cases, test suites);
+                                    Технические спецификации (Technical Specification)</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое Проектная документация (Project Documentation)?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Включает в себя продуктную документацию; Пользовательскую и
+                                    сопроводительную
+                                    документацию; Маркетинговую документацию.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #two row #five cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_documentation">
+                                <span class="question">Что такое чек-лист?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Список, содержащий ряд необходимых проверок во время
+                                    тестирования ПО. Отмечая пункты списка, команда или один тестировщик могут
+                                    узнать о текущем состоянии выполненной работы и о качестве ПО.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <!-- Technical Table -->
+    <table style="margin: auto; display: none;" class="pbox" id="technical">
+        <tbody>
+            <tr>
+                <!-- table #five row #one -->
+                <td>
+                    <!-- table #five row #one cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое HTML?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">HTML - это язык гипертекстовой разметки для создания веб-страниц.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #one cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое HTML-теги?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Это ключевые слова, обычно парные и окруженные скобками.
+                                    Первый тег - открывающий, второй - закрывающий со слэшем.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #one cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое JavaScript?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Это язык программирования, на котором пишется 
+                                    код для придания интерактивности веб-страницам.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #one cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Java и JavaScript одно и то же?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Полностью разные языки по концепту и дизайну.
+                                   Java  - более мощный и сложный язык программирования.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #one cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">В каком месте можно добавить JS-код в разметку?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">В &lt;body&gt; ;<br>в &lt;head&gt; ;<br>в виде внешнего файла, на который мы ссылаемся.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #one cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">
+                                    Что такое JS функция? Как она выполняется? Почему мы должны выполнять ее?
+                                  </span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Это блок кода;<br>
+                                    Происходит при ее вызове;<br>
+                                    Например, клик по кнопке;<br>
+                                    Вызов внутри скрипта;<br>
+                                    Вызов другой функции и т д;<br>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #one cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">В чем разница между == и === в JavaScript?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Оператор == сравнивает на равенство, а === — на идентичность.
+                                    Плюс оператора === состоит в том, что он не приводит два значения к одному типу.
+                                    .</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #five row #two -->
+                <td>
+                    <!-- table #five row #two cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое SQL?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">«Язык структурированных запросов» применяется для создания, 
+                                    модификации и управления данными в
+                                    реляционной базе данных, управляемой соответствующей системой управления БД.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #two cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое База данных?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Это хранилище для контента/информации (данных),
+                                     систематизированных таким образом, чтобы эти материалы могли быть найдены и
+                                     обработаны.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #two cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое Query?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Функция QUERY позволяет сделать выборку нужных строк из таблицы с
+                                    помощью SQL-запроса и отсортировать их.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #two cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое DBMS?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Система управления базами данных "СУБД" предназначена для определения, создания,
+                                    выборки, обновления и администрирования баз данных.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #two cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое Primary Key?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Это уникальный идентификатор для каждой записи в таблице БД.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #two cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое Внешний ключ (Foreign Key)?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    <!-- Представляет собой подмножество атрибутов некоторой
+                                        переменной
+                                     отношения R2, значения которых должны совпадать со значениями некоторого
+                                     потенциального ключа некоторой переменной отношения R1. -->
+                                     <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BD%D0%B5%D1%88%D0%BD%D0%B8%D0%B9_%D0%BA%D0%BB%D1%8E%D1%87"
+                                         target="_blank">Это колонка (или комбинация колонок), которая используется для
+                                         установления отношения между таблицами.</span>
+                                    <!-- FK is a column (or combination of columns)</a> that is used to
+                                    establish a relationship between the tables; Foreign key is usually not unique
+                                    (one-to-many relation) and shall always point to a primary key. -->
+
+                                    <!-- Представляет собой подмножество атрибутов</a> некоторой
+                                    переменной
+                                    отношения R2, значения которых должны совпадать со значениями некоторого
+                                    потенциального ключа некоторой переменной отношения R1. -->
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #two cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Назовите популярные БД.</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">ORACLE;<br>MongoDB;<br>MariaDB;<br> MySQL;<br> Postgres;<br>
+                                    etc.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #five row #three -->
+                <td>
+                    <!-- table #five row #three cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое XML?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">eXtensible Markup Language — расширяемый язык разметки;<br>
+                                    Был создан для передачи, а не для показа данных<br>
+                                    Расширяемый, поскольку не фиксирует разметку, 
+                                    разработчик волен создать собственные теги.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #three cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое CSS?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    «Каскадные таблицы стилей» — формальный язык описания внешнего вида документа
+                                    (веб-страницы);<br>
+                                    Определяет внешний вид HTML-элементов.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #three cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое FireBug?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Отладчик web-приложений, используется как отдельное расширение для браузера Mozilla
+                                    Firefox, являющееся консолью, отладчиком, и DOM-инспектором.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #three cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое Cookies?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере
+                                    пользователя: аутентификации, настроек, отслеживания состояния сеанса доступа.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #three cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое HTTP?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    «Протокол передачи гипертекста» — протокол прикладного уровня передачи данных,
+                                    изначально — в виде гипертекстовых документов в формате HTML, в настоящее время
+                                    используется для передачи произвольных данных.
+                                   </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #three cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое IP-адрес?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Internet Protocol Address «адрес Интернет-протокола» — уникальный
+                                    цифровой адрес (label), предписанный каждому устройству (компьютер, принтер), участвующему в 
+                                    компьютерной сети, которая использует для связи интернет-протокол.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #three cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое VPN?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    «Виртуальная частная сеть» — обобщённое название
+                                    технологий, обеспечивающих одно или несколько сетевых соединений (логическую
+                                    сеть) поверх другой сети (нпрм., Интернет). Например, соединить сотрудников с их домашних устройств
+                                    с сетью их компании через безопасный доступ.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #five row #four -->
+                <td>
+                    <!-- table #five row #four cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое Selenium Webdriver?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Программная библиотека, которая позволяет разрабатывать программы, управляющие поведением браузера.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #four cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое XPath?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Язык запросов к элементам XML-документа. Применяется для навигации между
+                                    элементами и атрибутами в XML-документе.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #four cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое DOM Inspector?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    <a href="https://developer.mozilla.org/ru/docs/Tools/Add-ons/DOM_Inspector"
+                                        target="_blank"></a>
+                                    Это инструмент, который можно использовать для инспекции и редактирования
+                                    DOM или любого веб-документа или XUL-приложения (XML User Interface Language).</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #four cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое JSON?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">JavaScript Object Notation - текстовый формат обмена данными,
+                                    основанный на JavaScript.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #four cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое jQuery?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Мультибраузерная JS библиотека, предназначенная для упрощения 
+                                    написания скриптов на клиентской части HTML.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #four cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое PHP?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Язык программирования общего назначения с открытым исходным кодом.
+                                    PHP специально сконструирован для веб-разработок и его код может внедряться
+                                    непосредственно в HTML.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #five row #four cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое API?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Application Programming Interface — это составляющая часть сервера,
+                                    которая получает запросы и отправляет
+                                    ответы. Каждый раз, когда пользователь
+                                    посещает какую-либо страницу в сети, он взаимодействует с API удалённого сервера.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #one row #three -->
+                <td>
+                    <!-- table #one row #two cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Что такое REST API?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">REST (RESTful) - это общие принципы организации взаимодействия
+                                    приложения/сайта
+                                    с сервером посредством протокола HTTP. Особенность REST в том, что сервер не
+                                    запоминает
+                                    состояние пользователя между запросами - в каждом запросе передаётся информация,
+                                    идентифицирующая пользователя (например, token, полученный через OAuth-авторизацию)
+                                    и все
+                                    параметры, необходимые для выполнения операции.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Методы HTTP запросов?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Основное предназначение запросов:<br/>
+                                    1. получение - GET<br/>
+                                    2. добавление - POST<br/>
+                                    3. модификация - PUT<br/>
+                                    4. удаление - DELETE
+                                    <!-- GET-запрос /rest/users - получение информации о всех пользователях
+                    GET-запрос /rest/users/125 - получение информации о пользователе с id=125
+                    POST-запрос /rest/users - добавление нового пользователя -->
+                                    PUT-запрос /rest/users/125 - изменение информации о пользователе с id=125
+                                    <!-- DELETE-запрос /rest/users/125 - удаление пользователя с id=125 -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">??Взаимодействие с сервером REST (RESTful)?</span>
+                            </div>
+
+                            <div class="back">
+                                <span class="answer">взаимодействие с сервером сводится к операциям
+                                    1. получение данных с сервера (обычно в формате JSON, или XML)
+                                    2. добавление новых данных на сервер
+                                    3. модификация существующих данных на сервере
+                                    4. удаление данных на сервере</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Чем метод POST отличается от PUT?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">POST подразумевает, что вы передаёте данные в теле запроса. PUT
+                                    - вы передаёте всё, что нужно в URL. Тела запроса нет.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #one row #two cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_technical">
+                                <span class="question">Чем отличается HTTP от HTTPS?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">передаваемые по протоколу HTTP данные не защищены, HTTPS
+                                    обеспечивает
+                                    конфиденциальность информации путем ее шифрования;
+                                    HTTP использует порт 80, HTTPS — порт 443.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Mobile table -->
+    <table style="margin: auto; display: none;" class="pbox" id="mobile">
+        <tbody>
+            <tr>
+                <!-- table #six row #one -->
+                <td>
+                    <!-- table #six row #one cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Типы мобильных платформ?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Licensed (JME, BREW, LiMo)<br>
+                                    Proprietary (iOS, Windows Phone, BB 10)<br>
+                                    Open Source (Android-OHA, Tizen, Linux OS, Firefox OS, webOS (LG))<br>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #one cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Назовите все версии Андроида.</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Android 1.0 Apple Pie(2008);
+                                    Cupcake (2009); 
+                                    Donut (2009); Eclair (2009); 
+                                    Froyo (2010); 
+                                    Gingerbread (2010); Honeycomb (2011); Ice Cream Sandwich (2011);
+                                    Jelly Bean (2012); KitKat;Lollipop;Marshmallow;Nougat;Oreo;Android 9 Pie;Android10;Android11;Android12</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #one cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Какой формат у файлов для Андроид?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    APK (Android Package) — формат архивных исполняемых 
+                                    файлов-приложений; похоже на файлы .exe в Windows.
+                                    Каждый .apk‑файл — это сжатый архив для исполнения в виртуальной машине Dalvik или ART.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #one cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Наиболее распространенные версии Android?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Oreo (8 и 8.1) - на 28,3% устройств.
+                                Android 7 Nougat - 19,2%, а на третьем — Android 6 Marshmallow.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #one cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Дайте короткое описание Android.</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    - операционная система для смартфонов, планшетных компьютеров, электронных книг, цифровых проигрывателей, "умных"
+                                    наручных часов, игровых приставок, нетбуков, смартбуков, очков Google, телевизоров, ситем автоматического управления
+                                    автомобилем и других устройств.
+                                    Основана на Linux и написана на Java. Была приобретена Google, но остается бесплатной и с открытым кодом (open source).
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #one cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Что такое виртуальная машина Dalvik?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Создана для выполнения программ, написанных на Java, созданная в Google. 
+                                    Входит в мобильную операционную систему Android.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #one cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Дайте короткое описание iOS.</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    мобильная операционная система для смартфонов, электронных планшетов, носимых проигрывателей и некоторых других
+                                    устройств, разрабатываемая и выпускаемая американской компанией Apple.
+                                    Базируется на Unix.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #six row #two -->
+                <td>
+                    <!-- table #six row #two cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Что такое Cocoa Touch?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Фреймворк для создания приложений под iPhone, iPod touch, и iPad.
+                                Основана на классах фреймворка Cocoa и использует язык Objective-C.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #two cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Какой формат у файлов iOS?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">ipa (от iOS App Store Package) — формат архивных файлов приложений
+                                    для iPhone, iPod Touch и iPad. Файлы с данным расширением хранятся в
+                                    магазине App Store и загружаются с помощью iTunes.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #two cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Нативный браузер iOS?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Safari</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #two cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Что такое Windows Phone OS?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">мобильная операционная система, разработанная Microsoft, вышла 11.10.2010. 21 октября начались поставки первых устройств на базе новой
+                                    платформы.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #two cell #five -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Что такое Symbian OS?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Операционная система для сотовых телефонов, смартфонов и
+                                    коммуникаторов, разрабатываемая консорциумом Symbian, основанным в 1998 г.
+                                    компанией Nokia.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #two cell #six -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Что такое Мобильное приложение?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">ПО для работы на
+                                    смартфонах, планшетах и других мобильных устройствах, разработанное для
+                                    конкретной платформы (iOS, Android, Windows Phone и т. д.).</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #two cell #seven -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Что такое Нативные приложения?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">прикладные программы, разработанные для использования на
+                                    определённой платформе или на определённом устройстве. Одно из их преимуществ — то, 
+                                    что они оптимизированы под конкретные ОС, поэтому могут работать корректно и быстро.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- table #six row #three -->
+                <td>
+                    <!-- table #six row #three cell #one -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Как сделать скриншот на iPhone (iOS device)?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Нажать "Home" и "Sleep" одновременно.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #three cell #two -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Как сделать скриншот на Android?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Нажать "Volume Down" и "Power" одновременно (для Android 4.0 или 
+                                    более позднии версии).</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #three cell #three -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">
+                                    Как снять крэш-лог для iOS?
+                                </span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    <a href="https://training.qatestlab.com/blog/technical-articles/getting-ios-crash-logs/"
+                                        target="_blank">Подключить устройство к компьютеру.</a>
+                                    Запустить iTunes.
+                                    Нажать «Доверять» в окне «Доверять этому компьютеру?» на
+                                    устройстве.
+                                    Нажать «Устройство».
+                                    Нажать «Синхронизировать».
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- table #six row #three cell #four -->
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Как снять крэш-лог для Android?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">
+                                    Запустить Eclipse, пойти в "Window" → "Show View" → "Other", затем выбрать
+                                    "LogCat".</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <!-- <td>
+                    https://riptutorial.com/ru/android/example/29141/%D1%83%D0%B1%D0%B8%D1%82%D1%8C-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81-%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B8-%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0-android
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Как убить процесс на Android?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Кликнуть и деражать кнопку Home – появляется окно Task Manager;<br>
+                                    Кликнуть активное приложение – "View Active Applications" – "Exit/End" или
+                                    "Exit/End all".</span>
+                            </div>
+                        </div>
+                    </div>
+                </td> -->
+                <!-- <td>
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">How to kill process on iOS?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">Double tap the home button to bring up the multi-tasking
+                                    view;<br>Swipe the app upwards to close.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td> -->
+                <!-- <td>
+                    <div class="flip-container" onclick="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front color_mobile">
+                                <span class="question">Что такое the difference between Mobile Testing and Mobile
+                                    Application Testing?</span>
+                            </div>
+                            <div class="back">
+                                <span class="answer">TestingMobile Testing means the complete testing of mobile in
+                                    System level + Application level;<br>Mobile Application testing deals with only the
+                                    features and multimedia part.</span>
+                            </div>
+                        </div>
+                    </div>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+    <!-- Тестирование в веселых картинках -->
+    <table style="margin: auto; display: none;" class="pbox" id="images">
+        <tbody>
+            <tr>
+                <!-- table #two row #one -->
+                <td>
+                     <h2>Взято отсюда: <a href="https://training.qatestlab.com/blog/happy-testing/students-test-types/"
+                             target="_blank" class="images-links">https://training.qatestlab.com/blog/happy-testing</a>.
+                     </h2>
+                    <img src="img/test1.jpg" alt="">
+                    <img src="img/test2.png" alt="">
+                    <img src="img/test3.jpg" alt="">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- About -->
+    <p style="text-align: center" class="about"><a href="http://www.portnov.com/drill/about.html" target="_blank"
+            style="text-decoration:none;">About</a></p>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+html {
+	overflow-y: scroll;
+}
+
+.flip-container {
+	perspective: 1000;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-o-perspective: 1000;
+}
+/* .flip-container:hover .flipper, .flip-container.hover .flipper { */
+.flip-container.hover .flipper {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+}
+
+.flip-container.hover .question {
+	display: none;
+}
+
+.flip-container .flipper {
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	cursor: pointer;
+}
+
+.flip-container, .front, .back {
+	width: 165px;
+	height: 157px;
+}
+
+.flipper {
+	position: relative;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+	-o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+}
+
+.front, .back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+}
+
+.front {
+	z-index: 2;
+	display: table;
+	box-shadow: 2px 2px 5px #888888;
+}
+
+/* Different colors for different types of questions */
+.front.color_qabasics{
+	background-color: #9A4EAE;
+}
+
+.front.color_testingtypes{
+	background-color: purple;
+}
+
+.front.color_bugs{
+	background-color: #DA70D6;
+}
+
+.front.color_documentation{
+	background-color: #C54B8C;
+}
+
+.front.color_technical{
+	background-color: #86608E;
+}
+
+.front.color_mobile{
+	background-color: #9370DB;
+}
+
+.back {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	background-color: #F8F8F8;
+	display: table;
+	box-shadow: 2px 2px 5px #888888;
+}
+
+/* Table cells magic */
+.question {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-weight: bold;
+	color: #F1F0FF;
+    padding: 0 5px;
+    text-align: center;
+	display: table-cell; 
+	vertical-align: middle; 
+}
+
+.answer {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 11px;
+    padding: 0 5px;
+    text-align: center;
+	display: table-cell; 
+	vertical-align: middle; 
+}
+
+.about {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+#about {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+/* Menu */
+ul#menu {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+ul#menu li {
+	position: relative;
+	/* float: center; */
+	border-bottom: 4px solid #EFEFEF;
+	margin-right: 10px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	display: inline-block;
+}
+
+ul#menu .current {
+	border-bottom:4px solid #3D496A;
+}
+
+ul#menu li:hover {
+	border-bottom:4px solid #3D496A;
+}
+
+ul#menu li a {
+	padding: 2px 2px;
+	text-decoration: none;
+	font: bold 13px "Trebuchet MS", Helvetica, sans-serif;
+	color: #68759C;
+}
+
+ul#menu li a:hover {
+	color: #8895B8;
+	border: none;
+}
+
+#images img{
+	width: 100%;
+}
+.images-links {
+	color: #68759C;
+	text-decoration: none;
+	transition: color .25s ease;
+}
+
+.images-links:hover {
+	transition: color .25s ease;
+	color: #8895B8;
+}

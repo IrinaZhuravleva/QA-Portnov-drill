@@ -1,0 +1,90 @@
+<tr>
+    <!-- table #one row #three -->
+    <td>
+        <!-- table #one row #two cell #one -->
+        <div class="flip-container" onclick="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front" id="color_qabasics">
+                    <span class="question">Что такое REST API?</span>
+                </div>
+                <div class="back">
+                    <span class="answer">REST (RESTful) - это общие принципы организации взаимодействия приложения/сайта
+                        с сервером посредством протокола HTTP. Особенность REST в том, что сервер не запоминает
+                        состояние пользователя между запросами - в каждом запросе передаётся информация,
+                        идентифицирующая пользователя (например, token, полученный через OAuth-авторизацию) и все
+                        параметры, необходимые для выполнения операции.</span>
+                </div>
+            </div>
+        </div>
+    </td>
+    <td>
+        <!-- table #one row #two cell #two -->
+        <div class="flip-container" onclick="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front" id="color_qabasics">
+                    <span class="question">Методы HTTP запросов?</span>
+                </div>
+                <div class="back">
+                    <span class="answer">
+                    1. получение - GET
+                    2. добавление - POST
+                    3. модификация - PUT
+                    4. удаление - DELETE
+                    <!-- GET-запрос /rest/users - получение информации о всех пользователях
+                    GET-запрос /rest/users/125 - получение информации о пользователе с id=125
+                    POST-запрос /rest/users - добавление нового пользователя -->
+                    PUT-запрос /rest/users/125 - изменение информации о пользователе с id=125
+                    <!-- DELETE-запрос /rest/users/125 - удаление пользователя с id=125 -->
+                </span>
+                </div>
+            </div>
+        </div>
+    </td>
+    <td>
+        <!-- table #one row #two cell #three -->
+        <div class="flip-container" onclick="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front" id="color_qabasics">
+                    <span class="question">??Взаимодействие с сервером REST (RESTful)?</span>
+                </div>
+                
+                <div class="back">
+                    <span class="answer">взаимодействие с сервером сводится к операциям
+                        1. получение данных с сервера (обычно в формате JSON, или XML)
+                        2. добавление новых данных на сервер
+                        3. модификация существующих данных на сервере
+                        4. удаление данных на сервере</span>
+                </div>
+            </div>
+        </div>
+    </td>
+    <td>
+        <!-- table #one row #two cell #four -->
+        <div class="flip-container" onclick="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front" id="color_qabasics">
+                    <span class="question">Чем метод POST отличается от PUT?</span>
+                </div>
+                <div class="back">
+                    <span class="answer">POST подразумевает, что вы передаёте данные в теле запроса. PUT
+                        - вы передаёте всё, что нужно в URL. Тела запроса нет.</span>
+                </div>
+            </div>
+        </div>
+    </td>
+    <td>
+        <!-- table #one row #two cell #five -->
+        <div class="flip-container" onclick="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front" id="color_qabasics">
+                    <span class="question">Чем отличается HTTP от HTTPS?</span>
+                </div>
+                <div class="back">
+                    <span class="answer">передаваемые по протоколу HTTP данные не защищены, HTTPS обеспечивает
+                        конфиденциальность информации путем ее шифрования;
+                        HTTP использует порт 80, HTTPS — порт 443.</span>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>

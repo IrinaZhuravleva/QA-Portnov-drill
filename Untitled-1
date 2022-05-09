@@ -1,0 +1,99 @@
+<!-- шестой ряд Типов тестирования -->
+    <tr>
+        <!-- table #two row #six -->
+        <td>
+            <!-- table #two row #five cell #one -->
+            <div class="flip-container" onclick="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front color_testingtypes">
+                        <span class="question"></span>
+                    </div>
+                    <div class="back">
+                        <span class="answer">
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <!-- table #two row #five cell #two -->
+            <div class="flip-container" onclick="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front color_testingtypes">
+                        <span class="question"></span>
+                    </div>
+                    <div class="back">
+                        <span class="answer"></span>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <!-- table #two row #five cell #three -->
+            <div class="flip-container" onclick="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front color_testingtypes">
+                        <span class="question"></span>
+                    </div>
+                    <div class="back">
+    
+                        <span class="answer"></span>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <!-- table #two row #five cell #four -->
+            <div class="flip-container" onclick="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front color_testingtypes">
+                        <span class="question"></span>
+                    </div>
+                    <div class="back">
+                        <span class="answer"></span>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <!-- table #two row #five cell #five -->
+            <div class="flip-container" onclick="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front color_testingtypes">
+                        <span class="question"></span>
+                    </div>
+                    <div class="back">
+    
+                        <span class="answer"></span>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <!-- table #two row #five cell #six -->
+            <div class="flip-container" onclick="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front color_testingtypes">
+                        <span class="question"></span>
+                    </div>
+                    <div class="back">
+                        <span class="answer"></span>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <!-- table #two row #five cell #seven -->
+            <div class="flip-container" onclick="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front color_testingtypes">
+                        <span class="question"></span>
+                    </div>
+                    <div class="back">
+                        <span class="answer"></span>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>

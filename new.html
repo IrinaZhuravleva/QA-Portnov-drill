@@ -1,0 +1,44 @@
+<a href="" target="_blank"></a>
+Что такое  тестирование?
+Что такое
+
+ color_qabasics
+<!-- https://www.portnov.com/sqa-questions -->
+
+1. Что такое тестирование?
+2. Цели тестирования?
+3. Что такое баг?
+4. Что такое валидация и верификация?
+5. Жизненный цикл ПО
+6. Виды документации: Продуктная и Проектная
+7. Что такое тест-план?
+8. Что такое тест-кейс?
+9. Что такое чек-лист?
+10. Что такое Use Case?
+11. Виды и методы тестирования?
+12. Техники тест-дизайна
+13. Отчетность в тестировании
+https://www.performance-lab.ru/wp-content/themes/pureengineering/images/sitetesting/test_report_example.pdf
+////
+14. Что такое REST API
+15. Методы HTTP запросов
+16. Чем метод POST отличается от PUT
+17. Чем отличается HTTP от HTTPS
+18. Query-параметры
+20. Жизненный цикл Android и iOS приложения
+
+$(".callback").submit(function() {
+var th = $(this);
+$.ajax({
+type: "POST",
+url: "php/mail.php",
+data: th.serialize()
+}).done(function() {
+$(".success").fadeIn(600);
+setTimeout(function() {
+th.trigger("reset");
+$(".success").fadeOut(600);
+}, 3000);
+});
+return false;
+});
